@@ -38,11 +38,11 @@ hugginface-hub = ["hf-hub", "tokenizers/http",  "tokenizers/rustls-tls"]
 
 [lib]
 name = "outlines_core"
-crate-type = ["cdylib", "rlib"]
+# crate-type = ["cdylib", "rlib"]
 
 [profile.release]
 opt-level = 3
-lto = false
+lto = true
 codegen-units = 1
 strip = true
 panic = 'abort'
